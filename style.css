@@ -1,0 +1,96 @@
+/* your provided style base */
+html, body {
+	width: 100%;
+	min-height: 100vh;
+	margin: 0;
+	scrollbar-color: var(--theme-dark) var(--theme-darker);
+}
+html.homepage, body.homepage {
+	max-width: 100vw;
+	overflow-x: hidden;
+}
+html {
+	background-color: var(--theme-darkest2);
+}
+:root {
+	--theme: rgb(127, 127, 127);
+	--theme-dark: rgb(63, 63, 63);
+	--theme-darker: rgb(25, 25, 25);
+	--theme-darkest: rgb(0, 0, 0);
+	--theme-darkest2: rgb(0, 0, 0);
+	--theme-opac85: rgba(127, 127, 127, 0.85);
+}
+
+@font-face {
+	font-family: 'Press Start 2P';
+	src: url('fonts/PressStart2P-Regular.ttf');
+}
+@font-face {
+	font-family: 'VT323';
+	src: url('fonts/VT323-Regular.ttf');
+}
+
+body {
+	font-family: 'Press Start 2P', 'VT323', Arial;
+	background-color: var(--theme-darkest2);
+	color: #fff;
+	text-align: center;
+	padding: 2em;
+}
+
+.pagetitle {
+	padding: 10px;
+	font-size: 0.9em;
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #aaa;
+}
+
+.menuTitle {
+	font-size: 1.5em;
+	text-decoration: underline;
+	margin-bottom: 1em;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+li {
+	margin: 1.5em 0;
+	padding: 1em;
+	background-color: var(--theme-darker);
+	border: 3px solid var(--theme);
+}
+
+.saveSlotName {
+	display: block;
+	font-size: 1.2em;
+	color: #fff;
+	margin-bottom: 0.25em;
+}
+
+.saveSlotSub {
+	display: block;
+	color: var(--theme);
+	margin-bottom: 0.5em;
+}
+
+.saveOption {
+	padding: 0.5em 1em;
+	color: #ff00ff;
+	border: 2px solid var(--theme);
+	cursor: pointer;
+	text-decoration: none;
+}
+.saveOption:hover {
+	filter: brightness(200%);
+	text-decoration: underline;
+}
+footer {
+	margin-top: 3em;
+	font-size: 0.75em;
+	color: var(--theme);
+}
