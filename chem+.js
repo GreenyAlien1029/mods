@@ -13,13 +13,32 @@
 
 // Adding elements:
 elements.toothpaste = {
-    color: "#ffffff",
-    behavior: behaviors.LIQUID,
-    category: "liquids",
-    viscosity: 1000,
+    name: "Toothpaste",
+    desc: "A paste for cleaning teeth. Contains abrasives, fluoride, and foaming agents.",
+    color: "#f0fff0",
+    behavior: behaviors.PASTE, // behaves like a thick goo
+    category: "elements",
     state: "liquid",
-    density: 1500
-    breakInto: ["sodiumfluoride","calciumcarbonate","silica","glycerin","sls"]
+    density: 1450,
+    viscosity: 30000,
+
+    breakInto: ["sodiumfluoride","calciumcarbonate","silica","glycerin","sls"],
+
+    reactions: {
+        "water": { elem1: "toothpaste", elem2: "toothpaste_water" }
+    }
+};
+
+// --- Toothpaste mixed with water ---
+elements.toothpaste_water = {
+    name: "Toothpaste Slurry",
+    desc: "Diluted toothpaste mixed with water.",
+    color: "#e0fff0",
+    behavior: behaviors.LIQUID,
+    category: "elements",
+    state: "liquid",
+    density: 1200,
+    viscosity: 5000
 };
 
 elements.sodiumFlouride = {
